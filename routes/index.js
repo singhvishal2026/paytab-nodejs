@@ -45,6 +45,7 @@ router.post("/payment", async function (req, res, next) {
 
 router.post("/updateTransactionStatus", async function (req, res, next) {
   console.log(req.body);
+  res.status(200).send();
 });
 
 module.exports = router;
