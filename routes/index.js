@@ -57,7 +57,6 @@ router.post("/updateTransactionStatus", async function (req, res, next) {
 });
 
 router.post("/hosted-payment", async function (req, res, next) {
-  console.log("re", req.body);
   let payload={
     profile_id: "92790",
     cart_amount: req.body.amount,
@@ -83,9 +82,9 @@ router.post("/hosted-payment", async function (req, res, next) {
       user_id:"sdjkjksksdjk"
     },
     return: `${process.env.PAYTAB_REDIRECT_URL}?userId=sdjkjksksdjk`, // pick from env, browser redirect url afer success of 3ds
-    callback:process.env.PAYTAB_REDIRECT_URL // post request from paytab server to our server with transaction details 
+    callback:process.env.PAYTAB_CALLBACK_URL // post request from paytab server to our server with transaction details 
   }
-
+  console.log('py',payload)
   try {
     let trns = await axios.post(
       "https://secure.paytabs.sa/payment/request",
