@@ -67,7 +67,6 @@ router.post("/hosted-payment", async function (req, res, next) {
     tran_type: "sale",
     tran_class: "ecom",
     hide_shipping: true,
-    framed: true,
     tokenise: 2,
     show_save_card: true,
     config_id: 2188,
