@@ -82,7 +82,7 @@ router.post("/hosted-payment", async function (req, res, next) {
       ip: "91.74.146.168",  
     },
     return: process.env.PAYTAB_REDIRECT_URL, // pick from env, browser redirect url afer success of 3ds
-    // callback:process.env.PAYTAB_CALLBACK_URL // post request from paytab server to our server with transaction details 
+    callback:process.env.PAYTAB_CALLBACK_URL // post request from paytab server to our server with transaction details 
   }
 
   try {
