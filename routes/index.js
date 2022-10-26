@@ -69,7 +69,6 @@ router.post("/hosted-payment", async function (req, res, next) {
     hide_shipping: true,
     tokenise: 2,
     show_save_card: true,
-    config_id: 2188,
     paypage_lang: "en",
     customer_details: {
       name: req.body.name,
