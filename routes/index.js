@@ -80,6 +80,7 @@ router.post("/hosted-payment", async function (req, res, next) {
     tokenise: 2,
     show_save_card: true,
     paypage_lang: "en",
+    token: '2C4652BD67A3ED35C6B191FC678775B8',
     customer_details: {
       name: req.body.name,
       email: req.body.email,
